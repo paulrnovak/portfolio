@@ -9,4 +9,4 @@ CSS will be powered by my old friend Tachyons.
 ## My To-do List
 - [ ] Incorporate Chilled Out Underlines
 - [ ] Use type rendering options to make it clear and nice
-- [ ] Get my old url back (paulrnovak.com) and enable forwarding
+- [ ] Get my [old url](www.paulrnovak.com) back and enable forwarding

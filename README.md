@@ -5,3 +5,8 @@ An attempt to simplify and move my site away from other places and services and 
 Gonna also attempt to create a real working blog / writing section within here.
 
 CSS will be powered by my old friend Tachyons.
+
+## My To-do List
+- [ ] Incorporate Chilled Out Underlines
+- [ ] Use type rendering options to make it clear and nice
+- [ ] Get my old url back (paulrnovak.com) and enable forwarding

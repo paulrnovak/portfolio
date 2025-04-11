@@ -1,4 +1,58 @@
-::selection {
-    color: white;
-    background-color: black;
+:root {
+  /* default colors */
+  --main--background: #e8e8e8;
+  --main--text: #1d1d1d;
+  --main--text--light: rgba(29, 29, 29, 0.2);
+  /* dollop colors */
+  --dollop--background: #f1e4d1;
+  --dollop--text: #e10b03;
+  /* all seasons colors */
+  --as--background: #e3dcc9;
+  --as--text: #006e50;
+  --as--text--light: #006e5120;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "commit";
+    src:
+        local("Commit"),
+        url("fonts/CommitMono-400-Regular.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/CommitMono-400-Regular.otf") format("opentype"),
+  }
+
+  .commit { font-family: 'Commit', courier, monospace; }
+
+  @font-face {
+    font-family: "untitled-sans";
+    src:
+        local("untitledsans"),
+        url("fonts/UntitledSans-Bold.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/UntitledSans-Bold.otf") format("opentype"),
+  }
+
+  .untitled-sans { font-family: 'untitled-sans', Helvetica, sans-serif; }
+
+  @font-face {
+    font-family: "jakob";
+    src:
+        local("jakob"),
+        url("fonts/jakob.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/jakob.otf") format("opentype"),
+  }
+
+  .jakob { font-family: 'jakob', Helvetica, sans-serif; }
+
+  /* fonts */
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-divider {
+    height: 1px;
+    width: 100%;
   }

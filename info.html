@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      ::selection {
+        color: var(--dollop--background);
+        background-color: var(--dollop--text);
+      }
+      body {
+        background-color: var(--dollop--background);
+        color: var(--dollop--text--light);
+      }
+      a {
+        color: var(--dollop--text);
+      }
+    </style>
+
+  </head>
+  <body class="commit mw9 center">
+    <div class="pa4">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <p class="measure-wide pt6 pt7-ns f6 lh-copy">
+            Info Page
+        </p>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

@@ -735,13 +735,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .baskerville { font-family: baskerville, serif; }
 .commit { font-family: 'Commit', courier, monospace; }
 
-@font-face {
-  font-family: "commit";
-  src:
-    local("Commit"),
-    url("fonts/CommitMono-400-Regular.otf") format("opentype") tech(color-COLRv1),
-    url("fonts/CommitMono-400-Regular.otf") format("opentype"),
-}
+
 
 
 /*
@@ -1663,7 +1657,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 */
 .strike { text-decoration: line-through; }
-.underline { text-decoration: underline; }
+.underline { text-decoration: underline; text-underline-offset: 0.3ex; }
 .no-underline { text-decoration: none; }
 /*
 
@@ -1876,7 +1870,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 */
 .hide-child .child { opacity: 0; transition: opacity .15s ease-in; }
 .hide-child:hover  .child, .hide-child:focus  .child, .hide-child:active .child { opacity: 1; transition: opacity .15s ease-in; }
-.underline-hover:hover, .underline-hover:focus { text-decoration: underline; }
+.underline-hover:hover, .underline-hover:focus { text-decoration: underline; text-underline-offset: 0.3ex; }
 /* Can combine this with overflow-hidden to make background images grow on hover
  * even if you are using background-size: cover */
 .grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }

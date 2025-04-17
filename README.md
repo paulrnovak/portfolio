@@ -7,7 +7,7 @@ Gonna also attempt to create a real working blog / writing section within here.
 CSS will be powered by my old friend Tachyons.
 
 ## My To-do List
-- Pages to build
+Pages to build
     - [ ] Writing
     - [ ] Now
     - [ ] Info

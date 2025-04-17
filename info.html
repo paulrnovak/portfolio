@@ -18,16 +18,25 @@
       }
       body {
         background-color: var(--dollop--background);
-        color: var(--dollop--text--light);
+        color: var(--dollop--text);
       }
       a {
         color: var(--dollop--text);
       }
+      a.underline:hover {
+            background-color: var(--dollop--text);
+            color: var(--main--background);
+            border-bottom-color: var(--dollop--background);
+        }
+
+        .project-divider {
+            background-color: var(--main--dollop);
+        }
     </style>
 
   </head>
   <body class="commit mw9 center">
-    <div class="pa4">
+    <div class="pa3 pa4-ns">
         <!--Navigation bar-->
         <div id="nav-placeholder">
         </div>

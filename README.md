@@ -9,4 +9,7 @@ CSS will be powered by my old friend Tachyons.
 ## My To-do List
 - [ ] Incorporate [Chilled Out Underlines](https://piccalil.li/links/chilled-out-text-underlines/)
 - [ ] Use type rendering options to make it clear and nice
+- [x] Keep the mono type thing going but try a bold sans as for the titles
 - [ ] Get my [old url](www.paulrnovak.com) back and enable forwarding
+- [ ] Try making [tabs](https://www.w3schools.com/howto/howto_js_tabs.asp) to be able to filter projects, maybe something like All, Personal, Client, Ongoing or something like that?
+- [ ] Make colophon

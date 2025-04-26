@@ -9,9 +9,10 @@ CSS will be powered by my old friend Tachyons.
 ## My To-do List
 - Pages to build
     - [ ] Writing
+        - [ ] Post Template
     - [ ] Now
     - [ ] Info
-- [ ] Put current time (CST) in the footer
+- [x] Put current time (CST) in the footer
 - [ ] Bring over now playing Last.fm widget from old site
 - [x] Incorporate [Chilled Out Underlines](https://piccalil.li/links/chilled-out-text-underlines/)
 - [ ] Use type rendering options to make it clear and nice

@@ -2,23 +2,60 @@
   /* default colors */
   --main--background: #e8e8e8;
   --main--text: #1d1d1d;
-  --main--text--light: rgba(29, 29, 29, 0.2);
   /* dollop colors */
   --dollop--background: #f1e4d1;
   --dollop--text: #e10b03;
   /* all seasons colors */
   --as--background: #e3dcc9;
   --as--text: #006e50;
-  --as--text--light: #006e5120;
+  /* sociologists of mn colors */
+  --som--background: #acd8ac;
+  --som--text: #4a4847;
+  /* itsthereal colors */
+  --itr--background: #33658a;
+  --itr--text: #fff2dc;
 }
 
 .bg-all-seasons {
   background-color: var(--as--text);
 }
 
+.hover-home-sa {
+  transition: 0.7s;
+}
 .hover-home-sa:hover {
   background-color: var(--as--background);
   color: var(--as--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-som {
+  transition: 0.7s;
+}
+.hover-home-som:hover {
+  background-color: var(--som--background);
+  color: var(--som--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-dollop {
+  transition: 0.7s;
+}
+
+.hover-home-dollop:hover {
+  background-color: var(--dollop--background);
+  color: var(--dollop--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-itr {
+  transition: 0.7s;
+}
+
+.hover-home-itr:hover {
+  background-color: var(--itr--background);
+  color: var(--itr--text);
+  transition-duration: 200ms;
 }
 
 /* fonts */
@@ -68,12 +105,4 @@
 
   .gap-3 {
     gap: 1rem;
-  }
-
-  .index-dot {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
   }

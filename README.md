@@ -8,6 +8,12 @@ CSS will be powered by my old friend Tachyons.
 
 ## My To-do List
 - Pages to build
+    - [ ] Project Template
+        - [ ] Full width img
+        - [ ] 2 imgs 50/50
+        - [ ] 2 imgs 75/25
+        - [ ] 2 imgs 25/75
+        - [ ] 3 imgs 33/33/33
     - [ ] Writing
         - [ ] Post Template
     - [ ] Now

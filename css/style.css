@@ -2,6 +2,9 @@
   /* default colors */
   --main--background: #e8e8e8;
   --main--text: #1d1d1d;
+  /* info colors */
+  --info--background: #CECECE;
+  --info--text: #7D6E58;
   /* dollop colors */
   --dollop--background: #f1e4d1;
   --dollop--text: #e10b03;
@@ -14,10 +17,39 @@
   /* itsthereal colors */
   --itr--background: #33658a;
   --itr--text: #fff2dc;
-}
-
-.bg-all-seasons {
-  background-color: var(--as--text);
+  /* comidaz cruz colors */
+  --cruz--background: #fee5dc;
+  --cruz--text: #ce3738;
+  /* voyageur colors */
+  --voyageur--background: #606548;
+  --voyageur--text: white;
+  /* dmj colors */
+  --dmj--background: #0f0f0f;
+  --dmj--text: #ffc663;
+  /* rosie colors */
+  --rosie--background: #ffefd8;
+  --rosie--text: #387b4c;
+  /* wayne woodworking colors */
+  --wayne--background: #e83738;
+  --wayne--text: #faf6cd;
+  /* xfctr colors */
+  --xfctr--background: #11202c;
+  --xfctr--text: #5697b8;
+  /* sunrise colors */
+  --sunrise--background: #b12f7d;
+  --sunrise--text: white;
+  /* mgk colors */
+  --mgk--background: #8dc63f;
+  --mgk--text: #2c4622;
+  /* six dot colors */
+  --six--background: #409ed7;
+  --six--text: white;
+  /* local sports colors */
+  --ls--background: #0a130a;
+  --ls--text: #dac3ad;
+  /* logos colors */
+  --logo--background: #1d1d1d;
+  --logo--text: #e8e8e8;
 }
 
 .hover-home-sa {
@@ -41,7 +73,6 @@
 .hover-home-dollop {
   transition: 0.7s;
 }
-
 .hover-home-dollop:hover {
   background-color: var(--dollop--background);
   color: var(--dollop--text);
@@ -51,10 +82,117 @@
 .hover-home-itr {
   transition: 0.7s;
 }
-
 .hover-home-itr:hover {
   background-color: var(--itr--background);
   color: var(--itr--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-cruz {
+  transition: 0.7s;
+}
+.hover-home-cruz:hover {
+  background-color: var(--cruz--background);
+  color: var(--cruz--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-voyageur {
+  transition: 0.7s;
+}
+.hover-home-voyageur:hover {
+  background-color: var(--voyageur--background);
+  color: var(--voyageur--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-dmj {
+  transition: 0.7s;
+}
+.hover-home-dmj:hover {
+  background-color: var(--dmj--background);
+  color: var(--dmj--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-dmj {
+  transition: 0.7s;
+}
+.hover-home-dmj:hover {
+  background-color: var(--dmj--background);
+  color: var(--dmj--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-rosie {
+  transition: 0.7s;
+}
+.hover-home-rosie:hover {
+  background-color: var(--rosie--background);
+  color: var(--rosie--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-wayne {
+  transition: 0.7s;
+}
+.hover-home-wayne:hover {
+  background-color: var(--wayne--background);
+  color: var(--wayne--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-xfctr {
+  transition: 0.7s;
+}
+.hover-home-xfctr:hover {
+  background-color: var(--xfctr--background);
+  color: var(--xfctr--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-sunrise {
+  transition: 0.7s;
+}
+.hover-home-sunrise:hover {
+  background-color: var(--sunrise--background);
+  color: var(--sunrise--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-mgk {
+  transition: 0.7s;
+}
+.hover-home-mgk:hover {
+  background-color: var(--mgk--background);
+  color: var(--mgk--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-six {
+  transition: 0.7s;
+}
+.hover-home-six:hover {
+  background-color: var(--six--background);
+  color: var(--six--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-ls {
+  transition: 0.7s;
+}
+.hover-home-ls:hover {
+  background-color: var(--ls--background);
+  color: var(--ls--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-logo {
+  transition: 0.7s;
+}
+.hover-home-logo:hover {
+  background-color: var(--logo--background);
+  color: var(--logo--text);
   transition-duration: 200ms;
 }
 
@@ -69,16 +207,6 @@
   }
 
   .commit { font-family: 'Commit', courier, monospace; }
-
-  @font-face {
-    font-family: "untitled-sans";
-    src:
-        local("untitledsans"),
-        url("fonts/UntitledSans-Bold.otf") format("opentype") tech(color-COLRv1),
-        url("fonts/UntitledSans-Bold.otf") format("opentype"),
-  }
-
-  .untitled-sans { font-family: 'untitled-sans', Helvetica, sans-serif; }
 
   @font-face {
     font-family: "jakob";

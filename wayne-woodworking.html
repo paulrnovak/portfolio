@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Wayne Woodworking — Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      ::selection {
+        color: var(--wayne--background);
+        background-color: var(--wayne--text);
+      }
+      body {
+        background-color: var(--wayne--background);
+        color: var(--wayne--text);
+      }
+      a {
+        color: var(--wayne--text);
+      }
+
+      a.underline:hover {
+          background-color: var(--wayne--text);
+          color: var(--wayne--background);
+          border-bottom-color: var(--wayne--background);
+      }
+
+      .project-divider {
+          background-color: var(--wayne--text--light);
+      }
+      </style>
+
+  </head>
+  <body class="bg-light-grey commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <div>
+            <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+                <div class="w-100-m w-40-ns pr3-ns">
+                    <h1 class="jakob f2 mb1">Wayne Woodworking</h1>
+                    <p class="f6 lh-copy ttu tracked o-50 mb0">
+                        Branding
+                    </p>
+                </div>
+                <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                    <p class="measure-wide f6 lh-copy pt2">
+                      After building cabinets and shelving for fancy suburban houses for a long time, Wayne Woodworking's owner Casey decided to strike it out on his own. Wanting to focus on more down-home projects, he reached out looking for a new brand identity that reflected his ideals. The inspiration and concept come from his own family. During our first meeting, he showed me a photo of his grandfather on a teeter-totter looking as happy as can be. After some exploration, the idea kept coming around and we landed on a literal logo that is almost an inside joke within his family.
+                    </p>
+                    <p class="measure-wide f6 lh-copy">
+                      Once the logo was complete, Casey almost instantly asked me for the vector files so he could test it out on his CNC machine. I made him put the logo on the bottom of the coffee table he made me, and I've been pleased to see it incorporated into many more of his recent projects.
+                    </p>
+                    <a class="f6 lh-copy underline ma0" href="https://www.instagram.com/wayne_woodworking/" target="_blank">
+                        @wayne_woodworking
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          <!-- Full width image -->
+          <img class="w-100" src="img/thumb/thumb_all-seasons.jpg"/>
+          <!-- 3 imgs 33/33/33 -->
+          <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start">
+            <img src="img/thumb/thumb_all-seasons.jpg" class="w-100 w-100-m w-33-ns">
+            <img src="img/thumb/thumb_all-seasons.jpg" class="w-100 w-100-m w-33-ns">
+            <img src="img/thumb/thumb_all-seasons.jpg" class="w-100 w-100-m w-33-ns">
+          </div>
+        </div>
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

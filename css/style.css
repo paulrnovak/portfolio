@@ -218,6 +218,16 @@
 
   .jakob { font-family: 'jakob', Helvetica, sans-serif; }
 
+  @font-face {
+    font-family: "univers";
+    src:
+        local("univers"),
+        url("fonts/UniversLTStd.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/UniversLTStd.otf") format("opentype"),
+  }
+
+  .univers { font-family: 'univers', Helvetica, sans-serif; }
+
   /* fonts */
 
   .project-list {

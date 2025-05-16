@@ -24,60 +24,43 @@
         color: var(--info--text);
       }
       a.underline:hover {
-            background-color: var(--info--text);
-            color: var(--main--background);
-            border-bottom-color: var(--info--background);
-        }
+        background-color: var(--info--text);
+        color: var(--info--background);
+        border-bottom-color: var(--info--background);
+      }
 
-        .project-divider {
-            background-color: var(--main--info);
-        }
+      .b--divider {
+        border-color: var(--info--text);
+      }
+
+      #recenttracks {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      
+      #recenttracks a {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        text-decoration: none;
+        display: inline-block;
+      }
+    
+      #recenttracks a:hover {
+        background-color: var(--info--text);
+        color: var(--info--background);
+        border-bottom-color: var(--info--background);
+      }
+    
+      #recenttracks img {
+        width: 52px;
+      }
+
+
     </style>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-<style>
-  ::selection {
-    color: var(--home--background);
-    background-color: var(--home--text);
-  }
-
-	.logodividerlinebw {
-  	background-color: var(--home--text);
-  }
-
-  a.underline_link:hover {
-  	background-color: var(--home--text);
-    color: var(--home--background);
-    border-bottom-color: var(--home--background);
-  }
-  
-  #recenttracks {
-  	display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 12px;
-  }
-  
- #recenttracks a {
- 		border-bottom-style: solid;
-  	border-bottom-width: 1px;
-  	text-decoration: none;
-  	transition: all .2s cubic-bezier(.39,.575,.565,1);
-  	display: inline-block;
- }
- 
- #recenttracks a:hover {
- 		background-color: var(--home--text);
-  	color: var(--home--background);
-  	border-bottom-color: var(--home--background);
- }
- 
-#recenttracks img {
-		width: 52px;
-}
-  
-</style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 
   </head>
   <body class="commit mw9 center">
@@ -108,12 +91,51 @@
                   My design work reflects my influences in simple and intuitive interfaces as well as clean and engaging brands and identities. My favorite types of projects are when I get to work with great people and learn new skills.
                 </p>
                 <!-- Full width image -->
-                <img class="measure-wide" src="img/info/info-img_01.png"/>
+                <img class="measure-wide w-100" src="img/info/info-img_01.png"/>
                 <div class="measure-wide">
-                  <p class="workhistorydate">Now Playing</p>
+                  <p class="workhistorydate f6">Currently Listening to:</p>
                   <div class="f6 link underline commit" id="recenttracks"></div>
                 </div>
               </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-column flex-column-m flex-row-ns pt4 mt4 bt b--divider">
+              <div class="w-100-m w-40-ns pr3-ns">
+                  <h2 class="f5 b mb1">Contact & Follow</h2>
+              </div>
+              <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns pt3 pt3-m pt0-l">
+                <!-- 2 imgs 50/50 -->
+                <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start">
+                  <div class="w-100 w-100-m w-50-ns flex flex-row items-center">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M18.75 3.75H1.25V16.25H18.75V3.75ZM2.5 5.72271V15H17.5V5.72255L9.99991 12.0688L2.5 5.72271ZM16.4188 5H3.58104L9.99991 10.4313L16.4188 5Z" fill="currentColor"/>
+                      </svg>
+                    <a href="mailto:paul.r.novak@gmail.com" target="_blank" class="underline ml2">Email</a>
+                  </div>
+                  <div class="w-100 w-100-m w-50-ns flex flex-row items-center">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0564 11.8513C9.91029 11.9637 9.67124 11.9637 9.52515 11.8513L7.43974 10.2457C7.29369 10.1332 7.2926 9.94779 7.43746 9.83368L9.52752 8.18754C9.67233 8.07343 9.90934 8.07343 10.0541 8.18754L12.1442 9.83368C12.289 9.94774 12.288 10.1332 12.1419 10.2457L10.0564 11.8513ZM18.1673 7.94736C18.3123 7.83348 18.3728 7.64136 18.3017 7.52056C18.2306 7.39976 18.0323 7.35672 17.8611 7.42495L15.0455 8.54682C14.8742 8.61515 14.7131 8.52158 14.6874 8.33905L14.2637 5.33195C14.238 5.14942 14.1007 5 13.9585 5C13.8163 5 13.679 5.14942 13.6533 5.33195L13.2297 8.33905C13.204 8.52158 13.0429 8.61515 12.8716 8.54682L10.1021 7.44331C9.93093 7.37513 9.6506 7.37513 9.47931 7.44331L6.70984 8.54682C6.53859 8.61515 6.37736 8.52158 6.35165 8.33905L5.92812 5.33195C5.9024 5.14942 5.76509 5 5.62293 5C5.48078 5 5.34341 5.14942 5.3177 5.33195L4.89417 8.33905C4.86845 8.52158 4.70727 8.61515 4.53603 8.54682L1.72043 7.42495C1.54915 7.35672 1.35081 7.39976 1.27978 7.52056C1.20875 7.64136 1.2692 7.83344 1.41415 7.94736L3.78245 9.80815C3.92741 9.92212 3.92741 10.1085 3.78245 10.2224L1.4142 12.0831C1.26925 12.197 1.2088 12.4007 1.27983 12.5358C1.35086 12.6709 1.54905 12.7252 1.72015 12.6565L4.5105 11.5361C4.6816 11.4674 4.84146 11.5608 4.86575 11.7435L5.26863 14.7758C5.29293 14.9585 5.4524 15.1081 5.62298 15.1081C5.79361 15.1081 5.95303 14.9585 5.97733 14.7758L6.38031 11.7435C6.40455 11.5607 6.56445 11.4674 6.73551 11.5361L9.4796 12.6379C9.65074 12.7066 9.93074 12.7066 10.1018 12.6379L12.846 11.5361C13.0171 11.4674 13.177 11.5608 13.2012 11.7435L13.6042 14.7758C13.6284 14.9585 13.7879 15.1081 13.9585 15.1081C14.1291 15.1081 14.2885 14.9585 14.3128 14.7758L14.7157 11.7435C14.74 11.5607 14.8999 11.4674 15.071 11.5361L17.8613 12.6565C18.0325 12.7252 18.2306 12.6709 18.3017 12.5358C18.3727 12.4007 18.3122 12.197 18.1673 12.0831L15.7991 10.2224C15.6541 10.1084 15.6541 9.92207 15.7991 9.8081L18.1673 7.94736Z" fill="currentColor"/>
+                      </svg>
+                    <a href="mailto:paul.r.novak@gmail.com" class="underline ml2">Are.na</a>
+                  </div>
+                </div>
+                <!-- 2 imgs 50/50 -->
+                <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start pt3">
+                  <div class="w-100 w-100-m w-50-ns flex flex-row items-center">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0564 11.8513C9.91029 11.9637 9.67124 11.9637 9.52515 11.8513L7.43974 10.2457C7.29369 10.1332 7.2926 9.94779 7.43746 9.83368L9.52752 8.18754C9.67233 8.07343 9.90934 8.07343 10.0541 8.18754L12.1442 9.83368C12.289 9.94774 12.288 10.1332 12.1419 10.2457L10.0564 11.8513ZM18.1673 7.94736C18.3123 7.83348 18.3728 7.64136 18.3017 7.52056C18.2306 7.39976 18.0323 7.35672 17.8611 7.42495L15.0455 8.54682C14.8742 8.61515 14.7131 8.52158 14.6874 8.33905L14.2637 5.33195C14.238 5.14942 14.1007 5 13.9585 5C13.8163 5 13.679 5.14942 13.6533 5.33195L13.2297 8.33905C13.204 8.52158 13.0429 8.61515 12.8716 8.54682L10.1021 7.44331C9.93093 7.37513 9.6506 7.37513 9.47931 7.44331L6.70984 8.54682C6.53859 8.61515 6.37736 8.52158 6.35165 8.33905L5.92812 5.33195C5.9024 5.14942 5.76509 5 5.62293 5C5.48078 5 5.34341 5.14942 5.3177 5.33195L4.89417 8.33905C4.86845 8.52158 4.70727 8.61515 4.53603 8.54682L1.72043 7.42495C1.54915 7.35672 1.35081 7.39976 1.27978 7.52056C1.20875 7.64136 1.2692 7.83344 1.41415 7.94736L3.78245 9.80815C3.92741 9.92212 3.92741 10.1085 3.78245 10.2224L1.4142 12.0831C1.26925 12.197 1.2088 12.4007 1.27983 12.5358C1.35086 12.6709 1.54905 12.7252 1.72015 12.6565L4.5105 11.5361C4.6816 11.4674 4.84146 11.5608 4.86575 11.7435L5.26863 14.7758C5.29293 14.9585 5.4524 15.1081 5.62298 15.1081C5.79361 15.1081 5.95303 14.9585 5.97733 14.7758L6.38031 11.7435C6.40455 11.5607 6.56445 11.4674 6.73551 11.5361L9.4796 12.6379C9.65074 12.7066 9.93074 12.7066 10.1018 12.6379L12.846 11.5361C13.0171 11.4674 13.177 11.5608 13.2012 11.7435L13.6042 14.7758C13.6284 14.9585 13.7879 15.1081 13.9585 15.1081C14.1291 15.1081 14.2885 14.9585 14.3128 14.7758L14.7157 11.7435C14.74 11.5607 14.8999 11.4674 15.071 11.5361L17.8613 12.6565C18.0325 12.7252 18.2306 12.6709 18.3017 12.5358C18.3727 12.4007 18.3122 12.197 18.1673 12.0831L15.7991 10.2224C15.6541 10.1084 15.6541 9.92207 15.7991 9.8081L18.1673 7.94736Z" fill="currentColor"/>
+                      </svg>
+                    <a href="mailto:paul.r.novak@gmail.com" class="underline ml2">Email</a>
+                  </div>
+                  <div class="w-100 w-100-m w-50-ns flex flex-row items-center">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0564 11.8513C9.91029 11.9637 9.67124 11.9637 9.52515 11.8513L7.43974 10.2457C7.29369 10.1332 7.2926 9.94779 7.43746 9.83368L9.52752 8.18754C9.67233 8.07343 9.90934 8.07343 10.0541 8.18754L12.1442 9.83368C12.289 9.94774 12.288 10.1332 12.1419 10.2457L10.0564 11.8513ZM18.1673 7.94736C18.3123 7.83348 18.3728 7.64136 18.3017 7.52056C18.2306 7.39976 18.0323 7.35672 17.8611 7.42495L15.0455 8.54682C14.8742 8.61515 14.7131 8.52158 14.6874 8.33905L14.2637 5.33195C14.238 5.14942 14.1007 5 13.9585 5C13.8163 5 13.679 5.14942 13.6533 5.33195L13.2297 8.33905C13.204 8.52158 13.0429 8.61515 12.8716 8.54682L10.1021 7.44331C9.93093 7.37513 9.6506 7.37513 9.47931 7.44331L6.70984 8.54682C6.53859 8.61515 6.37736 8.52158 6.35165 8.33905L5.92812 5.33195C5.9024 5.14942 5.76509 5 5.62293 5C5.48078 5 5.34341 5.14942 5.3177 5.33195L4.89417 8.33905C4.86845 8.52158 4.70727 8.61515 4.53603 8.54682L1.72043 7.42495C1.54915 7.35672 1.35081 7.39976 1.27978 7.52056C1.20875 7.64136 1.2692 7.83344 1.41415 7.94736L3.78245 9.80815C3.92741 9.92212 3.92741 10.1085 3.78245 10.2224L1.4142 12.0831C1.26925 12.197 1.2088 12.4007 1.27983 12.5358C1.35086 12.6709 1.54905 12.7252 1.72015 12.6565L4.5105 11.5361C4.6816 11.4674 4.84146 11.5608 4.86575 11.7435L5.26863 14.7758C5.29293 14.9585 5.4524 15.1081 5.62298 15.1081C5.79361 15.1081 5.95303 14.9585 5.97733 14.7758L6.38031 11.7435C6.40455 11.5607 6.56445 11.4674 6.73551 11.5361L9.4796 12.6379C9.65074 12.7066 9.93074 12.7066 10.1018 12.6379L12.846 11.5361C13.0171 11.4674 13.177 11.5608 13.2012 11.7435L13.6042 14.7758C13.6284 14.9585 13.7879 15.1081 13.9585 15.1081C14.1291 15.1081 14.2885 14.9585 14.3128 14.7758L14.7157 11.7435C14.74 11.5607 14.8999 11.4674 15.071 11.5361L17.8613 12.6565C18.0325 12.7252 18.2306 12.6709 18.3017 12.5358C18.3727 12.4007 18.3122 12.197 18.1673 12.0831L15.7991 10.2224C15.6541 10.1084 15.6541 9.92207 15.7991 9.8081L18.1673 7.94736Z" fill="currentColor"/>
+                      </svg>
+                    <a href="mailto:paul.r.novak@gmail.com" class="underline ml2">Are.na</a>
+                  </div>
+                </div>
           </div>
         </div>
 

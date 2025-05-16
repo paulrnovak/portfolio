@@ -34,6 +34,51 @@
         }
     </style>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+<style>
+  ::selection {
+    color: var(--home--background);
+    background-color: var(--home--text);
+  }
+
+	.logodividerlinebw {
+  	background-color: var(--home--text);
+  }
+
+  a.underline_link:hover {
+  	background-color: var(--home--text);
+    color: var(--home--background);
+    border-bottom-color: var(--home--background);
+  }
+  
+  #recenttracks {
+  	display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+ #recenttracks a {
+ 		border-bottom-style: solid;
+  	border-bottom-width: 1px;
+  	text-decoration: none;
+  	transition: all .2s cubic-bezier(.39,.575,.565,1);
+  	display: inline-block;
+ }
+ 
+ #recenttracks a:hover {
+ 		background-color: var(--home--text);
+  	color: var(--home--background);
+  	border-bottom-color: var(--home--background);
+ }
+ 
+#recenttracks img {
+		width: 52px;
+}
+  
+</style>
+
   </head>
   <body class="commit mw9 center">
     <div class="pa3 pa4-ns">
@@ -47,14 +92,30 @@
         </script>
         <!--end of Navigation bar-->
 
-        <!-- Intro / Header -->
-        <h1 class="jakob f3 measure-wide pt6 pt7-ns lh-copy">
-          Information
-        </h1>
-        <p class="measure-wide f6 lh-copy">
-            About Me.
-        </p>
-        <!-- Intro / Header -->
+        <div>
+          <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+              <div class="w-100-m w-40-ns pr3-ns">
+                  <h1 class="jakob f2 mb1">I’m Paul Novak a designer living and working in Minneapolis, MN.</h1>
+              </div>
+              <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                <p class="univers measure-wide f6 lh-copy pt2">
+                  Currently I'm working as a Creative Director at <a href="https://www.halftone.digital/" target="_blank" class="underline commit">Halftone Digital</a> a small but mighty remote agency specializing in product design & animation. My work there primarily consists of designing applications, products & systems for medical devices with Medtronic's Neuromodulation team.
+                </p>
+                <p class="univers measure-wide f6 lh-copy">
+                  Away from my day job I run a teeny freelance business, building and managing websites for a few clients a year and designing logos and ephemera for friends working on cool things. I also teach web design at the University of Minnesota ↗ on a part time basis a couple of days a week.
+                </p>
+                <p class="univers measure-wide f6 lh-copy">
+                  My design work reflects my influences in simple and intuitive interfaces as well as clean and engaging brands and identities. My favorite types of projects are when I get to work with great people and learn new skills.
+                </p>
+                <!-- Full width image -->
+                <img class="measure-wide" src="img/info/info-img_01.png"/>
+                <div class="measure-wide">
+                  <p class="workhistorydate">Now Playing</p>
+                  <div class="f6 link underline commit" id="recenttracks"></div>
+                </div>
+              </div>
+          </div>
+        </div>
 
 
         <!--Footer Start-->
@@ -68,7 +129,63 @@
         <!--Footer End-->
     </div>
 
-    
+    <script>
+
+      function lastFM_request(method, username, API_key, number, elementID) {
+        var lastFMurl = 'https://ws.audioscrobbler.com/2.0/?method=' + method + '&user=' + username + '&api_key=' + API_key + '&limit=' + number + '&format=json';
+        var element   = document.getElementById(elementID);
+        var xmlhttp   = new XMLHttpRequest();
+      
+        xmlhttp.open('GET', lastFMurl, true); // begins request to Last.FM
+      
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4) {			// When Last.FM is ready,
+            if(xmlhttp.status == 200) {			// And we have text,
+              var obj = JSON.parse(xmlhttp.responseText);
+              // console.log(obj);
+      
+              if (method == 'user.getrecenttracks') {
+                var total = obj.recenttracks['\@attr'].total;
+      
+                for (i = 0; i < number; i++) {	// Loop through responses
+                  var track   = obj.recenttracks.track[i]; // references this specific track
+                  // console.log(track);
+                  // fetches data from track
+                  var artistName = track.artist['\#text'];
+                  var albumName  = track.album['\#text'];
+                  var songName   = track.name;
+                  var songURL    = track.url;
+                  var imgURL     = track.image[1]['\#text']; // Image sizes go from 0 - 3
+      
+                  if (imgURL !== '') // if imgURL exists, print image
+                    element.innerHTML += '<img src="' + imgURL + '" alt="' + albumName + '" title="' + albumName + '"/> ';
+                  else              	// or print blank album cover
+                    element.innerHTML += '<img src="images/no-cover.png" alt="' + albumName + '" title="' + albumName + '"/> ';
+      
+                  // prints link to song with artist and song name
+                  element.innerHTML += '<a href="' + songURL + '" target="_blank" rel="noreferrer noopener">' + artistName + ' - ' + songName + '</a> ';
+      
+      
+                }
+              } else if (method == 'user.gettopartists') {
+                for (i = 0; i < number; i++) {
+                  var artist = obj.topartists.artist[i]; // references this specific artist
+                  // console.log(artist);
+                  element.innerHTML += "<img src='" + artist.image[1]["#text"] + "' alt='" + artist.name + "' />";
+                  element.innerHTML += "<a href='" + artist.url + "' target='_blank' rel='noreferrer noopener'>" + artist.name + "</a> with " + artist.playcount + " plays.<br/>";
+                }
+              }
+             }
+          }
+        };
+        xmlhttp.send(null); // Close connection
+      }
+      
+      setInterval(lastFM_request('user.getrecenttracks', 'novakp', 'bbced7728d519d18ca8b116e62660439', '1', 'recenttracks'), 5000);
+      setInterval(lastFM_request('user.gettopartists',   'novakp', 'bbced7728d519d18ca8b116e62660439', '5', 'topartists'),   5000);
+      
+      
+      </script>
 
   </body>
 </html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>The Dollop Timeline | Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+        ::selection {
+          color: var(--dollop--background);
+          background-color: var(--dollop--text);
+        }
+        body {
+          background-color: var(--dollop--background);
+          color: var(--dollop--text);
+        }
+        a {
+          color: var(--dollop--text);
+        }
+
+        a.underline:hover {
+            background-color: var(--dollop--text);
+            color: var(--dollop--background);
+            border-bottom-color: var(--dollop--background);
+        }
+      </style>
+
+  </head>
+  <body class="bg-light-grey commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <div>
+            <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+                <div class="w-100-m w-40-ns pr3-ns">
+                    <h1 class="jakob f2 mb1">The Dollop Timeline</h1>
+                    <p class="f6 lh-copy ttu tracked o-50 mb0">
+                      Web Design
+                      <br>
+                      Web Development
+                    </p>
+                </div>
+                <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                  <p class="univers measure-wide f6 lh-copy pt2">
+                    This fun little site is an homage to my favorite podcast, The Dollop. It's a bi-weekly american history podcast. Each week they analyze a topic from American history, at the beginning of each episode the host Dave yells the date of said topic.
+                  </p>
+                  <p class="univers measure-wide f6 lh-copy">
+                    Since the topics jump all around the history books I wanted a way to see the episodes in order of the dates of each topic. While also wanting to learn how to use Webflow's symbols and interactions better, I made the site myself.
+                  </p>
+                  <p class="univers measure-wide f6 lh-copy">
+                    (This is an unsolicited personal project purely made for fun and to learn new techniques – this is also very much a work in progress and ongoing.)
+                  </p>
+                  <a class="f6 lh-copy underline ma0" href="https://the-dollop-timeline.webflow.io/" target="_blank">
+                      dollop-timeline.webflow.io
+                  </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/dollop/dollop-home.png"/>
+
+          <video width="100%" height="auto" autoplay loop>
+            <source src="img/dollop/dollop_hover.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+
+          <!-- 2 imgs 50/50 -->
+          <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start">
+            <video width="100%" height="auto" autoplay loop class="w-100 w-100-m w-50-ns">
+              <source src="img/dollop/dollop_nav.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- 2 up float right -->
+          <div class="flex flex-row flex-row-ns justify-end gap-3">
+            <div class="fl w-50 w-25-l">
+              <img src="img/dollop/dollop-mobile-list.png" class="w-100">
+            </div>
+            <div class="fl w-50 w-25-l">
+              <img src="img/dollop/dollop-mobile-dates.png" class="w-100">
+            </div>
+          </div>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/dollop/dollop-list.png"/>
+
+        </div>
+
+         <!-- All Work / Back Link -->
+         <div class="w-100 pv6 center tc">
+          <a href="index.html" class="link underline f3">← All Work</a>
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

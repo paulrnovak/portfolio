@@ -228,6 +228,10 @@
 
   .univers { font-family: 'univers', Helvetica, sans-serif; }
 
+  /* Adding my own paragraph size */
+
+  p { font-size: .875rem; }
+
   /* fonts */
 
   .project-list {

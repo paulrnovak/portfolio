@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Voyageur Custom Saunas | Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+        ::selection {
+          color: var(--voyageur--background);
+          background-color: var(--voyageur--text);
+        }
+        body {
+          background-color: var(--voyageur--background);
+          color: var(--voyageur--text);
+        }
+        a {
+          color: var(--voyageur--text);
+        }
+
+        a.underline:hover {
+            background-color: var(--voyageur--text);
+            color: var(--voyageur--background);
+            border-bottom-color: var(--voyageur--background);
+        }
+      </style>
+
+  </head>
+  <body class="bg-light-grey commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <div>
+            <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+                <div class="w-100-m w-40-ns pr3-ns">
+                    <h1 class="jakob f2 mb1">Voyageur Custom Saunas</h1>
+                    <p class="f6 lh-copy ttu tracked o-50 mb0">
+                      Web Design
+                      <br>
+                      Web Development
+                    </p>
+                </div>
+                <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                  <p class="univers measure-wide f6 lh-copy pt2">
+                    Voyageur is a company that makes possibly to nicest sauna on wheels in the country. Taking the lead from the excellent rebrand by <a href="http://liinalundin.com/" class="underline commit" target="_blank">Liina & Co.</a> the style and concepts for the site came together quickly and easily. Taking the beautiful craftsmanship of owner Eric and giving it a place to shine was an excellent opportunity. Giving a clean and easy to digest place to get in touch about purchases and custom projects was the main objective.
+                  </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/voyageur/voyageur_home.png"/>
+
+          <!-- 2 imgs 60/40 -->
+          <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start">
+            <img src="img/voyageur/voyageur_contact.png" class="w-100 w-100-m w-60-ns">
+            <img src="img/voyageur/voyageur_gallery.png" class="w-100 w-100-m w-40-ns">
+          </div>
+
+          <!-- 2 up float right -->
+          <div class="flex flex-row flex-row-ns justify-end gap-3">
+            <div class="fl w-50 w-25-l">
+              <img src="img/voyageur/voyageur_mobile-menu.png" class="w-100">
+            </div>
+            <div class="fl w-50 w-25-l">
+              <img src="img/voyageur/voyageur_mobile-footer.png" class="w-100">
+            </div>
+          </div>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/voyageur/voyageur_details.png"/>
+
+          <!-- 3 up collapse 1 -->
+          <div class="w-100 flex flex-column flex-row-m flex-row-ns gap-3 items-start">
+            
+            <div class="w-100 w-50-m w-33-ns">
+              <video width="100%" height="auto" autoplay loop>
+                <source src="img/voyageur/voyageur_mobile.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="w-100 w-50-m w-33-ns">
+              <video width="100%" height="auto" autoplay loop>
+                <source src="img/voyageur/voyageur_backyard.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="w-100 w-50-m w-33-ns">
+              <video width="100%" height="auto" autoplay loop>
+                <source src="img/voyageur/voyageur_in-home.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          
+        </div>
+
+         <!-- All Work / Back Link -->
+         <div class="w-100 pv6 center tc">
+          <a href="index.html" class="link underline f3">← All Work</a>
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

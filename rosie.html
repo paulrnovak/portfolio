@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Rosie Hospitality | Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      ::selection {
+        color: var(--rosie--background);
+        background-color: var(--rosie--text);
+      }
+      body {
+        background-color: var(--rosie--background);
+        color: var(--rosie--text);
+      }
+      a {
+        color: var(--rosie--text);
+      }
+  
+      a.underline:hover {
+          background-color: var(--rosie--text);
+          color: var(--rosie--background);
+          border-bottom-color: var(--rosie--background);
+      }
+    </style>
+
+  </head>
+  <body class="commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <div>
+            <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+                <div class="w-100-m w-40-ns pr3-ns">
+                    <h1 class="jakob f2 mb1">Rosie Hospitality</h1>
+                    <p class="f6 lh-copy ttu tracked o-50 mb0">
+                      Branding
+                      <br>
+                      Web Design
+                    </p>
+                </div>
+                <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                  <p class="univers measure-wide f6 lh-copy pt2">
+                    When a few friends headed out west from Minnesota to tackle new opportunities in the hospitality space out west, I was happy to get the call to help with some branding & web work. With an aim to serve nothing but the best food and drink paired with the vibe of your grandmother's kitchen, Rosie Hospitality was born.
+                  </p>
+                  <a class="f6 lh-copy underline ma0" href="https://www.rosiehospitality.com/" target="_blank">
+                    www.rosiehospitality.com
+                  </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/rosies/rosie-logo.svg"/>
+
+          <!-- 2 imgs 60/40 -->
+          <div class="w-100 flex flex-column flex-column-m flex-row-ns gap-3 items-start">
+            <img src="img/rosies/rosie-stamp-p-1080.png" class="w-100 w-100-m w-60-ns">
+            <img src="img/rosies/rosie-apron.png" class="w-100 w-100-m w-40-ns">
+          </div>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/rosies/rosie-menus.png"/>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/rosies/rosie_web-home.jpg"/>
+
+          <!-- 2 up float left -->
+          <div class="flex flex-row flex-row-ns justify-start gap-3">
+            <div class="fl w-50 w-25-l">
+              <img src="img/rosies/rosie_web-dining.png" class="w-100">
+            </div>
+            <div class="fl w-50 w-25-l">
+              <img src="img/rosies/rosie_web-book.png" class="w-100">
+            </div>
+          </div>
+
+          <!-- 2 up float right -->
+          <div class="flex flex-row flex-row-ns justify-end gap-3">
+            <div class="fl w-50 w-25-l">
+              <img src="img/rosies/rosie_web-offerings.png" class="w-100">
+            </div>
+            <div class="fl w-50 w-25-l">
+              <img src="img/rosies/rosie_web-menu.png" class="w-100">
+            </div>
+          </div>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/rosies/rosie_web-footer.png"/>
+
+        </div>
+
+         <!-- All Work / Back Link -->
+         <div class="w-100 pv6 center tc">
+          <a href="index.html" class="link underline f3">← All Work</a>
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

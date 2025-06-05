@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>X-FCTR | Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      ::selection {
+        color: var(--xfctr--background);
+        background-color: var(--xfctr--text);
+      }
+      body {
+        background-color: var(--xfctr--background);
+        color: var(--xfctr--text);
+      }
+      a {
+        color: var(--xfctr--text);
+      }
+  
+      a.underline:hover {
+          background-color: var(--xfctr--text);
+          color: var(--xfctr--background);
+          border-bottom-color: var(--xfctr--background);
+      }
+    </style>
+
+  </head>
+  <body class="commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <div>
+            <div class="flex flex-column flex-column-m flex-row-ns pt6 pt7-ns">
+                <div class="w-100-m w-40-ns pr3-ns">
+                    <h1 class="jakob f2 mb1">X-FCTR</h1>
+                    <p class="f6 lh-copy ttu tracked o-50 mb0">
+                      Web Design
+                      <br>
+                      Web Development
+                    </p>
+                </div>
+                <div class="pl0-m pl3-ns pb3 pb3-m pb0-ns w-100-m w-60-ns">
+                  <p class="univers measure-wide f6 lh-copy pt2">
+                    X-FCTR is comprised of passionate interaction experts. They use their 5 senses to create events that bring people into new environments in order to learn about and be a part of a brand's vision. Our responsibility was to create a website where they could show their case studies to new clients and present their mission to the world.
+                  </p>
+                  <a class="f6 lh-copy underline ma0" href="https://www.x-fctr.com/" target="_blank">
+                    www.x-fctr.com
+                  </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/xfctr/xfctr_results.jpg"/>
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/xfctr/xfctr_contact.jpg"/>
+
+          <!-- 3 up no collapse -->
+          <div class="flex flex-row flex-row-ns gap-3">
+            <div class="fl w-50 w-33-l">
+              <img src="img/dmj/acrylic-resin.jpg" class="w-100">
+            </div>
+            <div class="fl w-50 w-33-l">
+              <img src="img/dmj/brick-wall.jpg" class="w-100">
+            </div>
+            <div class="fl w-50 w-33-l">
+              <img src="img/dmj/pizza-ring.jpg" class="w-100">
+            </div>
+          </div>
+
+          <!-- Full width image -->
+          <img class="w-100" src="img/dmj/dmj_site.jpg"/>
+
+        </div>
+
+         <!-- All Work / Back Link -->
+         <div class="w-100 pv6 center tc">
+          <a href="index.html" class="link underline f3">← All Work</a>
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

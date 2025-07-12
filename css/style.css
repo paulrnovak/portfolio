@@ -219,6 +219,16 @@
   .jakob { font-family: 'jakob', Helvetica, sans-serif; }
 
   @font-face {
+    font-family: "exetegue";
+    src:
+        local("exetegue"),
+        url("fonts/Exetegue-Bold.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/Exetegue-Bold.otf") format("opentype"),
+  }
+
+  .exetegue { font-family: 'exetegue', Helvetica, sans-serif; font-weight: bold; text-transform: uppercase; text-box-trim: trim-both; }
+
+  @font-face {
     font-family: "univers";
     src:
         local("univers"),

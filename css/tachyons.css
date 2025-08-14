@@ -1658,6 +1658,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 */
 .strike { text-decoration: line-through; }
 .underline { text-decoration: underline; text-underline-offset: 0.3ex; }
+.underline:hover { text-decoration: none; }
 .no-underline { text-decoration: none; }
 /*
 

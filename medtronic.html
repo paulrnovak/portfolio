@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Medtronic ‣ Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+        ::selection {
+          color: var(--mdt--background);
+          background-color: var(--mdt--text);
+        }
+        body {
+          background-color: var(--mdt--background);
+          color: var(--mdt--text);
+        }
+        a {
+          color: var(--mdt--text);
+        }
+
+        a.underline:hover {
+            background-color: var(--mdt--text);
+            color: var(--mdt--background);
+            border-bottom-color: var(--mdt--background);
+        }
+      </style>
+
+  </head>
+  <body class="bg-light-grey commit mw9 center">
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+
+        <!-- Project Heading start -->
+        <div class="flex flex-column flex-column-m flex-row-ns gap-3 pt6 pt7-ns">
+          <div class="w-100-m w-50-ns">
+              <h1 class="jakob f2 f-subheadline-ns mb1 mt0 mt1-ns">
+                Medtronic
+              </h1>
+              <p class="lh-copy ttu tracked o-50 mb0">
+                Product Design
+                <br>
+                UX/UI
+                <br>
+                Prototyping
+              </p>
+          </div>
+          <div class="pb3 pb3-m pb0-ns w-100-m w-50-ns">
+              <p class="univers measure-wide lh-copy">
+                This fun little site is an homage to my favorite podcast, The Dollop. It's a bi-weekly american history podcast. Each week they analyze a topic from American history, at the beginning of each episode the host Dave yells the date of said topic.
+              </p>
+              <p class="univers measure-wide lh-copy">
+                Since the topics jump all around the history books I wanted a way to see the episodes in order of the dates of each topic. While also wanting to learn how to use Webflow's symbols and interactions better, I made the site myself.
+              </p>
+              <p class="univers measure-wide f7 lh-copy">
+                (This is an unsolicited personal project purely made for fun and to learn new techniques – this is also very much a work in progress and ongoing.)
+              </p>
+              <p>
+                <a class="f6 lh-copy underline ma0" href="https://www.medtronic.com/en-us/l/patients/treatments-therapies/treatment-pathway/how-interstim-therapy-works.html" target="_blank">
+                  www.medtronic.com
+              </a>
+              </p>
+          </div>
+        </div>
+        <!-- Project Heading end -->
+
+        <!-- Project images container -->
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+          
+          <!-- Full width image -->
+          <img class="w-100" src="img/mdt/mdt_blur.jpg"/>
+
+        </div>
+
+         <!-- All Work / Back Link -->
+         <div class="w-100 pv6 center tc">
+          <a href="index.html" class="link underline f3">← All Work</a>
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+    
+
+  </body>
+</html>

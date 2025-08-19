@@ -50,6 +50,9 @@
   /* logos colors */
   --logo--background: #1d1d1d;
   --logo--text: #e8e8e8;
+  /* mdt colors */
+  --mdt--background: #170f5f;
+  --mdt--text: #DDE0F3;
 }
 
 .hover-home-sa {
@@ -184,6 +187,15 @@
 .hover-home-ls:hover {
   background-color: var(--ls--background);
   color: var(--ls--text);
+  transition-duration: 200ms;
+}
+
+.hover-home-mdt {
+  transition: 0.7s;
+}
+.hover-home-mdt:hover {
+  background-color: var(--mdt--background);
+  color: var(--mdt--text);
   transition-duration: 200ms;
 }
 

@@ -241,18 +241,21 @@
   .exetegue { font-family: 'exetegue', Helvetica, sans-serif; font-weight: bold; text-transform: uppercase; text-box-trim: trim-both; }
 
   @font-face {
-    font-family: "univers";
+    font-family: "gothic-a1";
     src:
-        local("univers"),
-        url("fonts/UniversLTStd.otf") format("opentype") tech(color-COLRv1),
-        url("fonts/UniversLTStd.otf") format("opentype"),
+        local("gothic-a1"),
+        url("fonts/GothicA1-Medium.ttf") format("opentype") tech(color-COLRv1),
+        url("fonts/GothicA1-Medium.ttf") format("opentype"),
   }
 
-  .univers { font-family: 'univers', Helvetica, sans-serif; }
+  .univers { font-family: 'gothic-a1', Helvetica, sans-serif; }
 
   /* Adding my own paragraph size */
 
-  p { font-family: 'univers', Helvetica, sans-serif; font-size: .875rem; line-height: 1.5; }
+  p { font-family: 'gothic-a1', Helvetica, sans-serif;
+    font-size: .875rem;
+    line-height: 1.5;
+  }
 
   /* fonts */
 

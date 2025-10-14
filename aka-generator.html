@@ -20,11 +20,18 @@
           background-color: var(--itr--background);
           color: var(--itr--text);
         }
+        
         a {
           color: var(--itr--text);
         }
 
         a.underline:hover {
+            background-color: var(--itr--text);
+            color: var(--itr--background);
+            border-bottom-color: var(--itr--background);
+        }
+        
+        p > a:hover {
             background-color: var(--itr--text);
             color: var(--itr--background);
             border-bottom-color: var(--itr--background);
@@ -47,10 +54,10 @@
         <!-- Project Heading start -->
         <div class="flex flex-column flex-column-m flex-row-ns gap-3 pt6 pt7-ns">
           <div class="w-100-m w-50-ns">
-              <h1 class="jakob f2 f-subheadline-ns mb1 mt0 mt1-ns">
+              <h1 class="jakob f2 f1-ns mb1 mt0 mt1-ns">
                 Itsthereal A.K.A. Generator
               </h1>
-              <p class="lh-copy ttu tracked o-50 mb0">
+              <p class="lh-copy ttu tracked o-50 mb0 commit">
                   Web Design
                   <br>
                   Web Development
@@ -58,13 +65,13 @@
           </div>
           <div class="pb3 pb3-m pb0-ns w-100-m w-50-ns">
               <p class="univers measure-wide lh-copy">
-                The brothers of <a href="https://www.itsthereal.com/" class="underline commit" target="_blank">ItsTheReal</a> made one of my favorite podcasts and do some of the best interviews in music. If you know them then you know the signature AKA's they shout at the top of every episode. Being a fan and wanting to learn some new stuff in Webflow I decided to try and make a fun little microsite that archives these hilarious lines.
+                The brothers of <a href="https://www.itsthereal.com/" target="_blank">ItsTheReal</a> made one of my favorite podcasts and do some of the best interviews in music. If you know them then you know the signature AKA's they shout at the top of every episode. Being a fan and wanting to learn some new stuff in Webflow I decided to try and make a fun little microsite that archives these hilarious lines.
               </p>
-              <p class="univers measure-wide f7 lh-copy">
+              <p class="univers measure-wide lh-copy">
                 (This is an unsolicited personal project purely made for fun and to learn new techniques – this is also very much a work in progress and ongoing.)
               </p>
               <p>
-                <a class="f6 underline ma0" href="https://itr-akas.webflow.io/" target="_blank">
+                <a href="https://itr-akas.webflow.io/" target="_blank">
                   www.itr-akas.webflow.io
                 </a>
               </p>
@@ -88,7 +95,9 @@
 
          <!-- All Work / Back Link -->
          <div class="w-100 pv6 center tc">
-          <a href="index.html" class="link underline f3">← All Work</a>
+          <p>
+            <a href="index.html" class="f3">← All Work</a>
+          </p>
         </div>
 
 

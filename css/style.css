@@ -208,7 +208,19 @@
   transition-duration: 200ms;
 }
 
+body { font-family: 'gothic', Helvetica, sans-serif; }
+
 /* fonts */
+
+@font-face {
+  font-family: "gothic";
+  src:
+      local("gothic"),
+      url("fonts/GothicA1-Medium.ttf") format("opentype") tech(color-COLRv1),
+      url("fonts/GothicA1-Medium.ttf") format("opentype"),
+}
+
+.gothic { font-family: 'gothic', Helvetica, sans-serif; }
 
 @font-face {
     font-family: "commit";
@@ -230,32 +242,24 @@
 
   .jakob { font-family: 'jakob', Helvetica, sans-serif; }
 
-  @font-face {
-    font-family: "exetegue";
-    src:
-        local("exetegue"),
-        url("fonts/Exetegue-Bold.otf") format("opentype") tech(color-COLRv1),
-        url("fonts/Exetegue-Bold.otf") format("opentype"),
-  }
-
-  .exetegue { font-family: 'exetegue', Helvetica, sans-serif; font-weight: bold; text-transform: uppercase; text-box-trim: trim-both; }
-
-  @font-face {
-    font-family: "gothic-a1";
-    src:
-        local("gothic-a1"),
-        url("fonts/GothicA1-Medium.ttf") format("opentype") tech(color-COLRv1),
-        url("fonts/GothicA1-Medium.ttf") format("opentype"),
-  }
-
-  .univers { font-family: 'gothic-a1', Helvetica, sans-serif; }
 
   /* Adding my own paragraph size */
 
-  p { font-family: 'gothic-a1', Helvetica, sans-serif;
+  p { font-family: 'gothic', Helvetica, sans-serif;
     font-size: .875rem;
     line-height: 1.5;
   }
+
+   /* Style links in paragraphs */
+
+   p > a {
+    font-family: 'Commit', courier, monospace;
+    text-decoration: underline; text-underline-offset: 0.3ex;
+   }
+
+   p > a:hover {
+    text-decoration: none;
+   }
 
   /* fonts */
 
@@ -267,6 +271,12 @@
 
   .project-divider {
     height: 1px;
+    width: 100%;
+  }
+
+  hr {
+    height: 1px;
+    border-width:0;
     width: 100%;
   }
 

@@ -860,6 +860,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 */
 .tracked { letter-spacing: .1em; }
 .tracked-tight { letter-spacing: -0.02em; }
+.tracked-tighter { letter-spacing: -0.04em; }
 .tracked-mega { letter-spacing: .25em; }
 /*
 

@@ -29,10 +29,16 @@
             color: var(--dollop--background);
             border-bottom-color: var(--dollop--background);
         }
+
+        a.underline:hover {
+            background-color: var(--dollop--text);
+            color: var(--dollop--background);
+            border-bottom-color: var(--dollop--background);
+        }
       </style>
 
   </head>
-  <body class="bg-light-grey commit mw9 center">
+  <body class="bg-light-grey commit center">
     <div class="pa3 pa4-ns">
         <!--Navigation bar-->
         <div id="nav-placeholder">
@@ -44,19 +50,17 @@
         </script>
         <!--end of Navigation bar-->
 
-        <!-- Project Heading start -->
-        <div class="flex flex-column flex-column-m flex-row-ns gap-3 pt6 pt7-ns">
-          <div class="w-100-m w-50-ns">
-              <h1 class="jakob f2 f1-ns mb1 mt0 mt1-ns">
-                The Dollop Timeline
-              </h1>
-              <p class="lh-copy ttu tracked o-50 mb0 commit">
+        <div class="mw6 center pt5 pt6-ns">
+          <div class="w-100 flex flex-column gap-3 items-start">
+            <h1 class="jakob f3 f2-ns tracked-tighter mt0 mb0 lh-solid">
+              The Dollop Timeline
+            </h1>
+            <p class="f6 commit lh-copy ttu tracked o-50 ma0 pt1 w-100 w-100-m w-50-ns">
                 Web Design
                 <br>
                 Web Development
-              </p>
-          </div>
-          <div class="pb3 pb3-m pb0-ns w-100-m w-50-ns">
+            </p>
+            <div>
               <p class="univers measure-wide lh-copy">
                 This fun little site is an homage to my favorite podcast, <a href="https://www.dolloppodcast.com/" target="_blank">The Dollop</a>. It's a bi-weekly american history podcast. Each week they analyze a topic from American history, at the beginning of each episode the host Dave yells the date of said topic.
               </p>
@@ -69,14 +73,14 @@
               <p>
                 <a href="https://the-dollop-timeline.webflow.io/" target="_blank">
                   www.dollop-timeline.webflow.io
-              </a>
+                </a>
               </p>
+            </div>
           </div>
         </div>
-        <!-- Project Heading end -->
 
         <!-- Project images container -->
-        <div class="w-100 pt4 pt5-ns flex flex-column gap-3">
+        <div class="mw9 center pt4 pt5-ns flex flex-column gap-3">
           
           <!-- Full width image -->
           <img class="w-100" src="img/dollop/dollop-home.png"/>
@@ -111,8 +115,7 @@
             <a href="index.html" class="f3">← All Work</a>
           </p>
         </div>
-
-
+        
         <!--Footer Start-->
         <div id="footer-placeholder">
         </div>
@@ -122,7 +125,8 @@
         });
         </script>
         <!--Footer End-->
-    </div>
+
+      </div>
 
     
 

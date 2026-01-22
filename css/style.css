@@ -208,44 +208,50 @@
   transition-duration: 200ms;
 }
 
-body { font-family: 'gothic', Helvetica, sans-serif; }
+body { font-family: 'Epilogue', Helvetica, sans-serif; }
 
 /* fonts */
 
 @font-face {
-  font-family: "gothic";
+  font-family: "Epilogue";
   src:
-      local("gothic"),
-      url("fonts/GothicA1-Medium.ttf") format("opentype") tech(color-COLRv1),
-      url("fonts/GothicA1-Medium.ttf") format("opentype"),
+      local("Epilogue"),
+      url("fonts/Epilogue-Regular.ttf") format("opentype") tech(color-COLRv1),
+      url("fonts/Epilogue-Regular.ttf") format("opentype"),
 }
 
-.gothic { font-family: 'gothic', Helvetica, sans-serif; }
+.gothic { font-family: 'Epilogue', Helvetica, sans-serif; }
 
 @font-face {
-    font-family: "commit";
+    font-family: "trispace";
     src:
-        local("Commit"),
-        url("fonts/CommitMono-400-Regular.otf") format("opentype") tech(color-COLRv1),
-        url("fonts/CommitMono-400-Regular.otf") format("opentype"),
+        local("trispace"),
+        url("fonts/Trispace-Light.ttf") format("opentype") tech(color-COLRv1),
+        url("fonts/Trispace-Light.ttf") format("opentype"),
   }
 
-  .commit { font-family: 'Commit', courier, monospace; }
+  .commit { font-family: 'trispace', courier, monospace; }
 
   @font-face {
-    font-family: "jakob";
+    font-family: "Cutive";
     src:
-        local("jakob"),
-        url("fonts/jakob.otf") format("opentype") tech(color-COLRv1),
-        url("fonts/jakob.otf") format("opentype"),
+        local("Cutive"),
+        url("fonts/Hobeaux-Rococeaux-Sherman.otf") format("opentype") tech(color-COLRv1),
+        url("fonts/Hobeaux-Rococeaux-Sherman.otf") format("opentype"),
   }
 
-  .jakob { font-family: 'jakob', Helvetica, sans-serif; }
+  .jakob { font-family: 'Cutive', Helvetica, sans-serif; }
+
+  .balance {
+    text-wrap: balance;
+  }
+  
+  /* fonts */
 
 
   /* Adding my own paragraph size */
 
-  p { font-family: 'gothic', Helvetica, sans-serif;
+  p { font-family: 'Epilogue', Helvetica, sans-serif;
     font-size: .875rem;
     line-height: 1.5;
   }
@@ -253,7 +259,7 @@ body { font-family: 'gothic', Helvetica, sans-serif; }
    /* Style links in paragraphs */
 
    p > a {
-    font-family: 'Commit', courier, monospace;
+    font-family: 'trispace', courier, monospace;
     text-decoration: underline; text-underline-offset: 0.3ex;
    }
 
@@ -261,7 +267,6 @@ body { font-family: 'gothic', Helvetica, sans-serif; }
     text-decoration: none;
    }
 
-  /* fonts */
 
   .project-list {
     display: flex;

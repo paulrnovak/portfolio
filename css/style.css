@@ -233,14 +233,14 @@ body { font-family: 'Epilogue', Helvetica, sans-serif; }
   .commit { font-family: 'trispace', courier, monospace; }
 
   @font-face {
-    font-family: "Cutive";
+    font-family: "HobeauxRococeaux";
     src:
-        local("Cutive"),
+        local("HobeauxRococeaux"),
         url("fonts/Hobeaux-Rococeaux-Sherman.otf") format("opentype") tech(color-COLRv1),
         url("fonts/Hobeaux-Rococeaux-Sherman.otf") format("opentype"),
   }
 
-  .jakob { font-family: 'Cutive', Helvetica, sans-serif; }
+  .jakob { font-family: 'HobeauxRococeaux', Helvetica, sans-serif; }
 
   .balance {
     text-wrap: balance;

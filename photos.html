@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Photos ‣ Paul R. Novak</title>
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/tachyons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <style>
+      ::selection {
+          color: var(--main--background);
+          background-color: var(--main--text);
+        }
+        body {
+          background-color: var(--main--background);
+          color: var(--main--text);
+        }
+
+        a {
+          color: var(--main--text);
+        }
+
+        a.underline:hover {
+            background-color: var(--main--text);
+            color: var(--main--background);
+            border-bottom-color: var(--main--background);
+        }
+        
+        p > a:hover {
+            background-color: var(--main--text);
+            color: var(--main--background);
+            border-bottom-color: var(--main--background);
+        }
+
+        .project-divider {
+            background-color: var(--main--text--light);
+        }
+
+        .block-title {
+          font-size: .875rem;
+          padding-top: .25rem;
+          opacity: .5;
+          letter-spacing: .1em;
+          line-height: 1.5;
+        }
+
+        .gallery {
+          display: grid;
+          padding: 0rem;
+          grid-gap: 1rem;
+          grid-template-columns: repeat(3,1fr);
+        }
+
+        @media(max-width: 900px){
+        .gallery {grid-template-columns: repeat(2,1fr);}
+
+        }
+        @media(max-width: 700px){
+        .gallery {grid-template-columns: repeat(1,1fr);}
+        }
+
+    </style>
+
+  </head>
+  <body class="commit center">
+
+    <div class="pa3 pa4-ns">
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#nav-placeholder").load("nav.html");
+        });
+        </script>
+        <!--end of Navigation bar-->
+        <!-- Intro / Header -->
+        <div class="mw6 center pt5 pt6-ns">
+          <h1 class="jakob f3 f2-ns mt0 mb0 lh-solid tracked-tighter">
+            Photos
+          </h1>
+          <p>
+            My attempt at a daily (or close) photo journal.
+          </p>
+          <p>
+            This page runs using my <a href="https://www.are.na/paul-r-novak/photo-journal-zdlg4ysynni" target="_blank">📓 Photo Journal</a> Are.na Channel and the <a href="https://www.are.na/developers/explore/channel/contents" target="_blank">Are.na API</a>.
+          </p>
+          <!-- Intro / Header -->
+        </div>
+
+        <div class="w-100 pt4 pt5-ns flex flex-column gap-3 mw9 center">
+          <div id="gallery" class=" gallery w-100 pt4 pt5-ns flex flex-column gap-3 center">
+          <!-- Blocks will be injected here -->
+          </div>
+        </div>
+
+
+        <script>
+        const channelUrl = "https://www.are.na/paul-r-novak/photo-journal-zdlg4ysynni";
+        const slug = channelUrl.split("/").filter(Boolean).pop();
+
+        const PER_PAGE = 100;      // adjust as desired
+        const MAX_PAGES = 10;      // safety cap
+
+        async function fetchAllBlocks() {
+          let page = 1;
+          let allBlocks = [];
+          let totalPages = 1;
+
+          while (page <= totalPages && page <= MAX_PAGES) {
+            const url = `https://api.are.na/v2/channels/${slug}/contents?page=${page}&per=${PER_PAGE}`;
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+            const data = await res.json();
+
+            const blocks = data.contents || data.channel?.contents || [];
+            allBlocks = allBlocks.concat(blocks);
+
+            // Are.na returns pagination info
+            totalPages = data.total_pages || totalPages;
+            page += 1;
+          }
+
+          return allBlocks;
+        }
+
+        async function init() {
+          try {
+            const blocks = await fetchAllBlocks();
+
+            // If needed, sort by position descending so newest is first
+            const newestFirst = [...blocks].sort((a, b) => (b.position || 0) - (a.position || 0));
+
+            renderBlocks(newestFirst);
+          } catch (err) {
+            console.error(err);
+            document.getElementById("gallery").innerText =
+              "Could not load Are.na channel.";
+          }
+        }
+
+        function renderBlocks(blocks) {
+          const gallery = document.getElementById("gallery");
+          gallery.innerHTML = "";
+
+          blocks.forEach(block => {
+            if (block.class !== "Image") return;
+
+            const imageUrl =
+              block.image?.display?.url ||
+              block.image?.original?.url ||
+              block.source?.url ||
+              null;
+
+            if (!imageUrl) return;
+
+            const blockEl = document.createElement("div");
+            blockEl.className = "block";
+
+            const img = document.createElement("img");
+            img.src = imageUrl;
+            img.alt = block.title || "";
+
+            const titleEl = document.createElement("div");
+            titleEl.className = "block-title";
+            titleEl.textContent = block.title || "";
+
+            blockEl.appendChild(img);
+            blockEl.appendChild(titleEl);
+            gallery.appendChild(blockEl);
+          });
+        }
+
+        init();
+      </script>
+
+        <!-- Project images container -->
+        <div class="mw9 center pt4 pt5-ns flex flex-column gap-3">
+
+          <!-- <embed src="https://www.scoby.page/photo-journal-zdlg4ysynni" type="text/html" style="width:100%;
+            height:100vh;
+            overflow:hidden;
+            margin:0px;
+            padding:0px;
+            border:none;" /> -->
+
+        </div>
+
+
+        <!--Footer Start-->
+        <div id="footer-placeholder">
+        </div>
+        <script>
+        $(function(){
+        $("#footer-placeholder").load("footer.html");
+        });
+        </script>
+        <!--Footer End-->
+    </div>
+
+  </body>
+</html>
